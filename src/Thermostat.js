@@ -5,6 +5,7 @@ function Thermostat(){
   this.MIN_TEMPERATURE = 10;
   this.NON_PSM_MAX = 32;
   this.PSM_MAX = 25;
+  this.LOW_USAGE_LIMIT = 18;
   this.maxTemperature = this.PSM_MAX;
   this.temperature = this.DEFAULT_TEMPERATURE;
   this.powerSaving = true;
@@ -40,7 +41,7 @@ Thermostat.prototype.switchPowerSaving = function(){
 };
 
 Thermostat.prototype.increaseTemperature = function(){
-  if (this.getCurrentTemperature() === this.maxTemperature) {
+  if (this.temperature === this.maxTemperature) {
     return;
   } else {
     this.temperature++;
@@ -48,7 +49,7 @@ Thermostat.prototype.increaseTemperature = function(){
 };
 
 Thermostat.prototype.decreaseTemperature = function(){
-  if (this.getCurrentTemperature() === this.MIN_TEMPERATURE) {
+  if (this.temperature === this.MIN_TEMPERATURE) {
     return;
   } else {
     this.temperature--;
@@ -57,4 +58,13 @@ Thermostat.prototype.decreaseTemperature = function(){
 
 Thermostat.prototype.resetTemperature = function(){
   this.temperature = this.DEFAULT_TEMPERATURE;
+};
+
+Thermostat.prototype.energyUsage = function(){
+  if (this.temperature < this.LOW_USAGE_LIMIT) {
+    return 'low-usage';
+  } else {
+    return 'medium-usage';
+  }
+
 };

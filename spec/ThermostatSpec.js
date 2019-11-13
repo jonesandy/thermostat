@@ -87,4 +87,21 @@ describe('Thermostat', function(){
 
   });
 
+  describe('displays usage levels', function(){
+
+    it('shows low-usage', function(){
+      for (var i = 0; i < 3; i++) {
+        thermostat.decreaseTemperature();
+      }
+      expect(thermostat.energyUsage()).toEqual('low-usage');
+    });
+
+    it('shows medium-usage', function(){
+      expect(thermostat.energyUsage()).toEqual('medium-usage');
+    });
+
+
+
+  });
+
 });
