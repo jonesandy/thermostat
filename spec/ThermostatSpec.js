@@ -59,6 +59,12 @@ describe('Thermostat', function(){
       expect(thermostat.isPowerSavingOn()).toBe(true);
     });
 
+    it('is off and has MAX TEMP 32', function(){
+      thermostat.switchPowerSaving();
+      expect(thermostat.isPowerSavingOn()).toBe(false);
+      expect(thermostat.getMaxTemperature()).toBe(32);
+    });
+
   });
 
 });
