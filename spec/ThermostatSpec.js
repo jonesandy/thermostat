@@ -100,6 +100,14 @@ describe('Thermostat', function(){
       expect(thermostat.energyUsage()).toEqual('medium-usage');
     });
 
+    it('shows high-usage', function(){
+      thermostat.switchPowerSaving();
+      for (var i = 0; i < 6; i++){
+        thermostat.increaseTemperature();
+      }
+      expect(thermostat.energyUsage()).toEqual('high-usage');
+    });
+
 
 
   });
