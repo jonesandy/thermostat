@@ -1,0 +1,61 @@
+body {
+  background-color: #4ACAD9;
+  font-family: axia, sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-family: omnium-wide, sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  width: 40%;
+}
+
+button:focus, button:active {
+  outline: none;
+}
+
+sup {
+  font-size: 2rem;
+}
+
+main {
+  margin: auto;
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: #84f4e9;
+  box-shadow: 0px 14px 28px #14e5d0, 0px 10px 10px #3eeedd;
+  display: flex;
+  flex-direction: column;
+}
+
+#interface {
+  background-color: #6DF2E5;
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 14px 28px #218f9c, 0px 10px 10px #2ab6c6;
+}
+
+.currentTemp {
+  font-size: 4rem;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

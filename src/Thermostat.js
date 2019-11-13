@@ -3,8 +3,8 @@
 function Thermostat(){
   this.DEFAULT_TEMPERATURE = 20;
   this.MIN_TEMPERATURE = 10;
-  this.NON_PSM_MAX = 32;
   this.PSM_MAX = 25;
+  this.NON_PSM_MAX = 32;
   this.LOW_USAGE_LIMIT = 18;
   this.maxTemperature = this.PSM_MAX;
   this.temperature = this.DEFAULT_TEMPERATURE;
