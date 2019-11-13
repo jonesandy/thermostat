@@ -39,6 +39,13 @@ describe('Thermostat', function(){
       expect(thermostat.getCurrentTemperature()).toEqual(10);
     });
 
+    it('stops increasing when limit hit - PSM', function(){
+      thermostat.switchPowerSaving();
+      thermostat.temperature = 32;
+      thermostat.increaseTemperature();
+      expect(thermostat.getCurrentTemperature()).toEqual(32);
+    });
+
   });
 
   describe('power saving mode', function(){
@@ -63,6 +70,19 @@ describe('Thermostat', function(){
       thermostat.switchPowerSaving();
       expect(thermostat.isPowerSavingOn()).toBe(false);
       expect(thermostat.getMaxTemperature()).toBe(32);
+    });
+
+  });
+
+  describe('default temperature', function(){
+
+    it('can be reset back to default', function(){
+      for (var i = 0; i < 6; i++){
+        thermostat.increaseTemperature();
+      }
+      thermostat.resetTemperature();
+      expect(thermostat.getCurrentTemperature()).toEqual(20);
+      expect(thermostat.getCurrentTemperature()).not.toEqual(25);
     });
 
   });
