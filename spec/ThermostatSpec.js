@@ -13,20 +13,30 @@ describe('Thermostat', function(){
   });
 
   it('new thermostat min temp = 10', function(){
-    expect(thermostat.getMinTemp()).toEqual(10);
+    expect(thermostat.getMinTemperature()).toEqual(10);
   });
 
 
   describe('changes temperature', function(){
 
     it('increases by 1', function(){
-      thermostat.increaseTemp();
+      thermostat.increaseTemperature();
       expect(thermostat.getCurrentTemperature()).toEqual(21);
     });
 
     it('decreases by 1', function(){
-      thermostat.decreaseTemp();
+      thermostat.decreaseTemperature();
       expect(thermostat.getCurrentTemperature()).toEqual(19);
+    });
+
+  });
+
+  describe('has temperature limits', function(){
+
+    it('stops decreasing when limit hit', function(){
+      thermostat.temperature = 10;
+      thermostat.decreaseTemperature();
+      expect(thermostat.getCurrentTemperature()).toEqual(10);
     });
 
   });
@@ -48,7 +58,7 @@ describe('Thermostat', function(){
       thermostat.switchPowerSaving();
       expect(thermostat.isPowerSavingOn()).toBe(true);
     });
-    
+
   });
 
 });
