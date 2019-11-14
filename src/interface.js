@@ -1,21 +1,27 @@
 var thermo = new Thermostat;
 
 $(document).ready(function(){
-  $("#tempValue").text(thermo.getCurrentTemperature());
+
+  function updateTemperature(){
+    $("#tempValue").text(thermo.getCurrentTemperature());
+    $("#tempValue").attr('class', thermo.energyUsage());
+  };
+
+  updateTemperature();
 
   $("#tempUp").on('click', function(){
     thermo.increaseTemperature()
-    $("#tempValue").text(thermo.getCurrentTemperature());
+    updateTemperature();
   });
 
   $("#tempDown").on('click', function(){
     thermo.decreaseTemperature()
-    $("#tempValue").text(thermo.getCurrentTemperature());
+    updateTemperature();
   });
 
   $("#resetTemp").on('click', function(){
     thermo.resetTemperature()
-    $("#tempValue").text(thermo.getCurrentTemperature());
+    updateTemperature();
   });
 
 

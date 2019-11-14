@@ -55,6 +55,20 @@ main {
   color: white;
 }
 
+.low-usage {
+  font-size: 7rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: green;
+}
+
+.high-usage {
+  font-size: 7rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: red;
+}
+
 .currentTemp {
   font-size: 7rem;
   margin-top: 20px;

@@ -38,7 +38,6 @@ Thermostat.prototype.switchPowerSaving = function(){
   } else {
     this.setMaxTemperature(this.NON_PSM_MAX);
   }
-  this.isPowerSavingOn();
 };
 
 Thermostat.prototype.increaseTemperature = function(){

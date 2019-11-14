@@ -53,9 +53,24 @@ main {
   box-shadow: 0px 14px 28px darken($main, 20%), 0px 10px 10px darken($main, 10%);
 }
 
+
 .psmOn {
   background-color: red;
   color: white;
+}
+
+.low-usage {
+  font-size: 7rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: green;
+}
+
+.high-usage {
+  font-size: 7rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: red;
 }
 
 .currentTemp {
@@ -63,6 +78,10 @@ main {
   margin-top: 20px;
   margin-bottom: 50px;
 }
+
+
+
+
 
 .buttons {
   margin-bottom: 20px;
