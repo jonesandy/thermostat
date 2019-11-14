@@ -13,4 +13,19 @@ $(document).ready(function(){
     $("#tempValue").text(thermo.getCurrentTemperature());
   });
 
+  $("#resetTemp").on('click', function(){
+    thermo.resetTemperature()
+    $("#tempValue").text(thermo.getCurrentTemperature());
+  });
+
+
+  $("#togglePSM").on('click', function(){
+    thermo.switchPowerSaving();
+    if (thermo.isPowerSavingOn()){
+      $("#togglePSM").addClass("psmOn");
+    } else {
+      $("#togglePSM").removeClass("psmOn");
+    }
+  });
+
 });
