@@ -44,6 +44,7 @@ $(document).ready(function(){
       $('#current-temperature').text(data.main.temp);  
     });
     $("#currentCity").text(city);
+    $("#current-city").val('');
   };
 
   $('#select-city').submit(function(event) {
