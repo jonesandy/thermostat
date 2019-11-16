@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Thermostat</title>
-  <link rel="stylesheet" href="https://use.typekit.net/miz7pgk.css">
-  <link rel="stylesheet" href="styles/style.css">
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <script src="src/Thermostat.js"></script>
-  <script src="src/interface.js"></script>
-</head>
-<body>
-  <div id="interface">
-    <header>
-      <h1>THERMOSTAT</h1>
-    </header>
-    <main id="thermostatBody">
-      <p class="currentTemp">
-        <span id="tempValue"></span>
-        <sup>&deg;</sup>
-      </p>     
-      <div class="buttons">
-        <button id="tempUp">UP</button>
-        <button id="tempDown">DOWN</button>
-      </div>
-      <div class="buttons">
-        <button id="resetTemp">RESET</button>
-        <button id="togglePSM" class="psmOn">POWER SAVER</button>
-      </div>
-    </main>
-    <footer>
-      <section>
-        <h2>Current City</h2>
-        <p id="currentCity"></p>
-        <p>Temperature: <span id="current-temperature">20</span><sup>&deg;</sup></p>
-        <form id="select-city">
-          <input id="current-city" type="text" placeholder="Enter a city"></input>
-          <input type="submit"></input>
-        </form>
-      </section>
-    </footer>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thermostat</title>
+    <!-- Pulling fonts from Adobe Typekit -->
+    <link rel="stylesheet" href="https://use.typekit.net/miz7pgk.css">
+    <!-- own styles-->
+    <link rel="stylesheet" href="styles/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="src/Thermostat.js"></script>
+    <script src="src/interface.js"></script>
+  </head>
+
+  <body>
+    <div id="interface">
+      <header>
+        <h1>THERMOSTAT</h1>
+      </header>
+
+      <main>
+        <div class="currentTemp">
+          <p>
+            <span id="tempValue"></span>
+            <sup>&deg;</sup>
+          </p> 
+        </div>   
+        <div class="buttons">
+          <button id="tempUp">UP</button>
+          <button id="tempDown">DOWN</button>
+        </div>
+        <div class="buttons">
+          <button id="resetTemp">RESET</button>
+          <button id="togglePSM" class="psmOn">POWER SAVER</button>
+        </div>
+      </main>
+
+      <footer>
+        <div>
+          <h2>Current City</h2>
+          <p id="currentCity"></p>
+          <p>Temperature: <span id="cityTemperature"></span><sup>&deg;</sup></p>
+          <form id="selectCity">
+            <input id="cityName" type="text" placeholder="Enter a city"></input>
+            <input type="submit"></input>
+          </form>
+        </div>
+      </footer>
+
+    </div><!-- end of #interface-->
+  </body>
 </html>

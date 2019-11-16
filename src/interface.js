@@ -41,15 +41,15 @@ $(document).ready(function(){
     var token = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed';
     var units = '&units=metric';
     $.get(url + token + units, function(data) {
-      $('#current-temperature').text(data.main.temp);  
+      $('#cityTemperature').text(data.main.temp);  
     });
     $("#currentCity").text(city);
-    $("#current-city").val('');
+    $("#cityName").val('');
   };
 
-  $('#select-city').submit(function(event) {
+  $('#selectCity').submit(function(event) {
     event.preventDefault();
-    var city = $('#current-city').val();
+    var city = $('#cityName').val();
     displayWeather(city);
   });
 
