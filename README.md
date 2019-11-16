@@ -4,6 +4,16 @@
 
 Front-end only app to mimic the functionality of a thermostat.
 
+Temperature is controlled by UP and DOWN buttons.
+
+You can reset the temperature back to 20 degrees using the RESET button.
+
+Power Saving Mode is toggled using the POWER SAVNG BUTTON.
+
+You can find and display the temperature for a city by typing in a city and pressing Submit.
+
+Display updates on any change made or button pressed.
+
 ***
 ## Design and build
 
