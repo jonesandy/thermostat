@@ -71,7 +71,8 @@ footer {
 }
 
 .psmOn {
-  color: #FF564B;
+  background-color: #FF564B;
+  color: white;
 }
 
 .low-usage {

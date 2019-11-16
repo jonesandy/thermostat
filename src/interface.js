@@ -29,8 +29,10 @@ $(document).ready(function(){
     thermo.switchPowerSaving();
     if (thermo.isPowerSavingOn()){
       $("#togglePSM").addClass("psmOn");
+      $("#togglePSM").text("POWER SAVING ON");
     } else {
       $("#togglePSM").removeClass("psmOn");
+      $("#togglePSM").text("POWER SAVING OFF");
     }
   });
 
